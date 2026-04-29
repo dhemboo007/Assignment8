@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    
+    <h1>💸 Catatan Keuangan Mandiri 💸</h1>
+
+    <!-- FORM -->
+    <div class="card">
+      <form id="expenseForm">
+
+        <div class="input-group">
+          <label>Nama Pengeluaran</label>
+          <input type="text" id="name" placeholder="Contoh: Beli kopi">
+        </div>
+
+        <div class="input-group">
+          <label>Nominal</label>
+          <input type="number" id="amount" placeholder="Contoh: 25000">
+        </div>
+
+        <div class="input-group">
+          <label>Kategori</label>
+          <select id="category">
+            <option value="">Pilih Kategori</option>
+            <option value="Makan">Makan</option>
+            <option value="Transportasi">Transportasi</option>
+            <option value="Belanja">Belanja</option>
+            <option value="Hiburan">Hiburan</option>
+            <option value="Lainnya">Lainnya</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn tambah">
+          Tambah Data
+        </button>
+
+      </form>
+    </div>
+
+    <!-- FILTER -->
+    <div class="card">
+      <div class="filter-box">
+        <label>Filter Kategori</label>
+
+        <select id="filterCategory">
+          <option value="Semua">Semua</option>
+          <option value="Makan">Makan</option>
+          <option value="Transportasi">Transportasi</option>
+          <option value="Belanja">Belanja</option>
+          <option value="Hiburan">Hiburan</option>
+          <option value="Lainnya">Lainnya</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- TOTAL -->
+    <div class="total-card">
+      <h2>Total Pengeluaran</h2>
+      <p id="total">Rp 0</p>
+    </div>
+
+    <!-- LIST -->
+    <div class="card">
+      <h2>Riwayat Pengeluaran</h2>
+
+      <div id="expenseList"></div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
